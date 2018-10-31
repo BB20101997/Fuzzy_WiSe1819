@@ -1,0 +1,28 @@
+\section*{\underline{Aufgabe 2}}
+
+\subsection*{a)}
+
+$n \in [1,100]$
+
+$\mu_H(n)=1$
+
+\begin{tikzpicture}
+	\begin{axis}[
+		axis x line=bottom,
+		axis y line=left,
+		xtick={1,10,20,...,100},
+		ytick={0,0.1,...,1.0},
+		xmin=1, xmax=105,
+		xlabel={Eier},
+		ymin=0, ymax = 1.05,
+		ylabel={$\mu_H(n)$}
+	]	
+	\addplot [mark=none,domain=1:100] {1};
+	\end{axis}
+\end{tikzpicture}
+
+\subsection*{b)}
+
+``möglich'' ist meiner Auffassung nach immer ein scharfer Begriff,
+auch wenn er mit z.B. ``warscheinlich'' zu ``wahrscheinlich möglich'' kombiniert wird
+ist möglich weiterhin scharf auch wenn die gesammte Aussage duch ``wahrscheinlich'' unscharf wird.
