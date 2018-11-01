@@ -1,0 +1,189 @@
+\section*{\underline{Aufgabe 1}}
+
+\subsection*{a)}
+
+\begin{tikzpicture}
+	\begin{axis}[
+		axis x line=bottom,
+		axis y line=left,
+		width=14cm,
+		height=8cm,
+		xtick={-20,-15,-10,...,40},
+		ytick={0,0.2,...,1.2},
+		xmin=-20, xmax=40,
+		xlabel={Temperatur in °C},
+		ymin=0, ymax = 1.05,
+		ylabel={$\mu_H(x)$}
+	]	
+	
+	\addplot [mark=none,domain=-20:40] coordinates {
+		(-20, 1)
+		(15, 1)
+		(20, 0)
+	}
+	node[pos=0.94, above right] {``kalt''};
+	
+	\end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\begin{axis}[
+		axis x line=bottom,
+		axis y line=left,
+		width=14cm,
+		height=8cm,
+		xtick={-20,-15,-10,...,40},
+		ytick={0,0.2,...,1.2},
+		xmin=-20, xmax=40,
+		xlabel={Temperatur in °C},
+		ymin=0, ymax = 1.05,
+		ylabel={$\mu_H(x)$}
+	]	
+	
+	\addplot [mark=none,domain=-20:40] coordinates {
+		(15, 0)
+		(20, 1)
+		(25, 1)
+		(30, 0)
+	}
+	node[pos=0.85, above right] {``warm''};
+	
+	\end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\begin{axis}[
+		axis x line=bottom,
+		axis y line=left,
+		width=14cm,
+		height=8cm,
+		xtick={-20,-15,-10,...,40},
+		ytick={0,0.2,...,1.2},
+		xmin=-20, xmax=40,
+		xlabel={Temperatur in °C},
+		ymin=0, ymax = 1.05,
+		ylabel={$\mu_H(x)$}
+	]	
+	
+	\addplot [mark=none,domain=-20:40] coordinates {
+		(25, 0)
+		(30, 1)
+		(40, 1)
+	}
+	node[pos=0.15, above left] {``heiß''};
+
+	\end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\begin{axis}[
+		axis x line=bottom,
+		axis y line=left,
+		width=14cm,
+		height=8cm,
+		xtick={-20,-15,-10,...,40},
+		ytick={0,0.2,...,1.2},
+		xmin=-20, xmax=40,
+		xlabel={Temperatur in °C},
+		ymin=0, ymax = 1.05,
+		ylabel={$\mu_H(x)$}
+	]	
+	
+	\addplot [mark=none,domain=-20:40] coordinates {
+		(12.5, 0)
+		(15, 1)
+		(30, 1)
+		(32.5, 0)
+	}
+	node[pos=0.05, above left] {``angenehm''};
+	
+	\end{axis}
+\end{tikzpicture}
+
+
+\subsection*{b)}
+
+
+\begin{tikzpicture}
+\begin{axis}[
+axis x line=bottom,
+axis y line=left,
+width=14cm,
+height=8cm,
+xtick={-20,-15,-10,...,40},
+ytick={0,0.2,...,1.2},
+xmin=-20, xmax=40,
+xlabel={Temperatur in °C},
+ymin=0, ymax = 1.05,
+ylabel={$\mu_H(x)$}
+]	
+
+\draw[] (axis cs: -20,1) -- (axis cs: 15,1)	parabola[bend at end] (axis cs: 20,0)
+node[pos=1, below right] {``sehr kalt''};
+
+\end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\begin{axis}[
+axis x line=bottom,
+axis y line=left,
+width=14cm,
+height=8cm,
+xtick={-20,-15,-10,...,40},
+ytick={0,0.2,...,1.2},
+xmin=-20, xmax=40,
+xlabel={Temperatur in °C},
+ymin=0, ymax = 1.05,
+ylabel={$\mu_H(x)$}
+]	
+
+\draw[] (axis cs: 15,0) parabola[bend right] (axis cs: 20,1) -- (axis cs: 25,1) parabola[bend at end] (axis cs: 30,0) 
+node[pos=1, below right] {``sehr warm''};
+
+\end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\begin{axis}[
+axis x line=bottom,
+axis y line=left,
+width=14cm,
+height=8cm,
+xtick={-20,-15,-10,...,40},
+ytick={0,0.2,...,1.2},
+xmin=-20, xmax=40,
+xlabel={Temperatur in °C},
+ymin=0, ymax = 1.05,
+ylabel={$\mu_H(x)$}
+]	
+
+\draw[] (axis cs: 25,0)	parabola[bend right] (axis cs: 30,1) -- (axis cs: 40,1)
+node[pos=0, below left] {``sehr heiß''};
+
+\end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\begin{axis}[
+axis x line=bottom,
+axis y line=left,
+width=14cm,
+height=8cm,
+xtick={-20,-15,-10,...,40},
+ytick={0,0.2,...,1.2},
+xmin=-20, xmax=40,
+xlabel={Temperatur in °C},
+ymin=0, ymax = 1.05,
+ylabel={$\mu_H(x)$}
+]	
+
+\draw[] (axis cs: 12.5,0) parabola[bend right] (axis cs: 15,1) -- (axis cs: 30,1) parabola[bend at end] (axis cs: 32.5,0)
+node[pos=0, below left] {``sehr angenehm''};
+
+\end{axis}
+\end{tikzpicture}
+
+\subsection*{c)}
+Der sehr-Operator konzentriert die Fuzzy-Menge:\\\\
+$\mu_{\text{sehr}}(x) = \mu(x)^2$
