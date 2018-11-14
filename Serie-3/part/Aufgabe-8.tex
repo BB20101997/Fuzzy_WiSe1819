@@ -56,16 +56,24 @@ $= 1-(1-a-c+ac)- (1-(1-b-c+bc)) = a+c-ac - (b+c-bc)$
 $= a-b -ac + bc = -a(c-1) + b(c-1) = \underbrace{(b-a)}_{\geq 0}\underbrace{(c-1)}_{\leq 0} \leq 0 $
 
 3)
-TODO
-%TODO
+
+$Z_1(a,b) = 1-(1-a)(1-b) = 1-(1-b)(1-a) = Z_1(b,a)$
 
 4)
-TODO
-%TODO
+
+$Z_1(a,Z_1(b,c)) = 1-(1-a)(1-Z_1(b,c))$
+
+$= 1-(1-a)(1-(1-(1-b)(1-c))) = 1-(1-a)((1-b)(1-c))$
+
+$= 1-(1-a)(1-b)(1-c) = 1 - ((1-a)(1-b))(1-c)$
+
+$= 1 - (1-(1-(1-a)(1-b)))(1-c) = 1 - (1-Z_1(a,b))(1-c)$
+
+$= Z_1(Z_1(a,b),c)$
 
 \paragraph*{}
 
-Aus ii)1) bis ii)4) folgt $Z_0$ ist s-Norm.
+Aus ii)1) bis ii)4) folgt $Z_1$ ist s-Norm.
  
 
 
