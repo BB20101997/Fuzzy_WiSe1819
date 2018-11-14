@@ -1,1 +1,71 @@
 \section*{\underline{Aufgabe 8}}
+
+Für $Y \in [0,1] : Z_Y (a,b) := (a\cdot b)^{1-y}\cdot(1-(1-a)(1-b))^y$
+
+Es gilt:
+
+$Z_0(a,b) = (a\cdot b)^{1-0} \cdot (1-(1-a)\cdot (1-b))^0 = a\cdot b $ und
+
+$Z_1(a,b) = (a\cdot b)^{1-1} \cdot (1-(1-a)\cdot (1-b))^1 = 1-(1-a)\cdot (1-b) $
+
+Sein $a,b,c \in [0,1]$.
+
+\subsection*{i) t-Norm}
+1) 
+
+$Z_0(a,1) = a\cdot1 = a$
+
+2) 
+
+Sei $a \leq  b$.
+
+Dann gilt:
+
+$Z_0(a,c) = a\cdot c = a\cdot c \leq a\cdot c + (b-a)\cdot c = b\cdot c = Z_0(b,c)$
+
+3) 
+
+$Z_0(a,b) = a\cdot b = b\cdot a = Z_0(b,a)$
+
+4)
+
+$Z_0(a,Z_0(b,c)) = a\cdot (b\cdot c) = (a\cdot b)\cdot c = Z_0(Z_0(a,b),c)$
+
+\paragraph*{}
+Aus i)1) bis i)4) folgt $Z_0$ ist t-Norm.
+
+
+\subsection*{ii) s-Norm}
+
+1) 
+
+$Z_1(0,a) = 1-(1-0)(1-a) = 1-(1-a) = 1-1+a= a$
+
+2) 
+
+Sei $a \leq  b$.
+
+$Z_0(a,c) \leq Z_0(b,c) \Leftrightarrow Z_0(a,c) - Z_0(a,b) \leq 0$
+
+Dann gilt:
+
+$Z_1(a,c) - Z_1(b,c) = 1 - (1-a)(1-c) - (1 - (1-b)(1-c))$
+
+$= 1-(1-a-c+ac)- (1-(1-b-c+bc)) = a+c-ac - (b+c-bc)$
+
+$= a-b -ac + bc = -a(c-1) + b(c-1) = \underbrace{(b-a)}_{\geq 0}\underbrace{(c-1)}_{\leq 0} \leq 0 $
+
+3)
+TODO
+%TODO
+
+4)
+TODO
+%TODO
+
+\paragraph*{}
+
+Aus ii)1) bis ii)4) folgt $Z_0$ ist s-Norm.
+ 
+
+
