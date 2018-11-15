@@ -1,1 +1,52 @@
 \section*{\underline{Aufgabe 7}}
+
+\textit{Hinweis: Die rechtsbündigen Zahlen in Klammern verweisen auf die verwendeten Eigenschaften der t-Normen.}\\
+
+\newtheorem{lem}{Lemma}
+\begin{lem}
+  Es gilt ${t}\left( 0,a \right) = 0$ für alle $a \in [0,1]$.
+\end{lem}
+\begin{proof}
+  \begin{align*}
+    &{t}\left( 0,1 \right) = 0 \tag{1}\\
+    &0 \leq 0 \wedge a \leq 1 \Rightarrow {t}\left( 0,a \right) \leq {t}\left( 0,1 \right) \tag 2\\
+    &{t}\left( 0,a \right) \leq 0 \Rightarrow {t}\left( 0,a \right) = 0
+  \end{align*}
+\end{proof}
+
+\newtheorem{bew}{Beweis}
+\begin{bew}[Aufgabe 7]
+
+\end{bew}
+\begin{proof}
+
+Für die linke Ungleichung erhalten wir bei Seitentausch:
+
+\begin{align*}
+{t}\left( a,b \right)\geq\textit{dra}_t\left( a,b \right)=\left\{ 
+\begin{array}{*{35}{l}}   
+a & \textit{falls} & b=1, \\ 
+b & \textit{falls} & a=1, \\   
+0 & \textit{sonst} \\  
+\end{array} 
+\right.
+\end{align*}
+
+Wir zeigen die drei Beziehungen, die durch die Fallunterscheidung entstehen:
+
+\begin{align*}
+ \textit{Fall} \enspace b=1: \quad &{t}\left( a,1 \right) = a \geq a = \textit{dra}_t\left( a,1 \right) \tag 1\\
+ \textit{Fall} \enspace a=1: \quad &{t}\left( 1,b \right) = {t}\left( b,1 \right) = b \geq b = \textit{dra}_t\left( b,1 \right) \tag{3, 1}\\
+ \textit{Fall} \enspace a\neq 1, b\neq 1: \quad &\textit{Mit Lemma 1 folgt:}\\
+  &{t}\left( a,b \right) \geq {t}\left( a,0 \right) = 0 = \textit{dra}_t\left( a,b \right) 
+\end{align*}
+
+Für die rechte Ungleichung erhalten wir:
+
+\begin{align*}
+&{t}\left( a,b \right) \leq {t}\left( a,1 \right) = a \tag{2, 1}\\
+&{t}\left( a,b \right) \leq {t}\left( 1,b \right) = {t}\left( b,1 \right) = b \tag{2, 3, 1}\\
+& {t}\left( a,b \right) \leq a \wedge {t}\left( a,b \right) \leq b \Rightarrow {t}\left( a,b \right) \leq \textit{min}\left\{ a,b \right\} = t_\textit{min}\left( a,b \right)
+\end{align*}
+
+\end{proof}
