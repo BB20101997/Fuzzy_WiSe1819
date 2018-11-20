@@ -1,2 +1,60 @@
 \section*{\underline{Aufgabe 10}}
 
+%% y \in [0,1]
+%% OP1 = A_y(a,b) = [alg_p(a,b)]^(1-y) [alg_s(a,b)]^y
+%% OP2 = kK^l_y   = y* min(a,b) + (1-y)(a+b)/2
+%% OP3 = kK^r_y   = y* max(a,b) + (1-y)(a+b)/2 
+
+%% alg_p(a,b) = ab     t-Norm
+%% alg_s(a,b) = a+b-ab s-Norm
+
+$A_0(a,b)    = [alg_p(a,b)]^{1-0} [alg_s(a,b)]^0 = alg_p(a,b) = ab$
+
+$A_1(a,b)    = [alg_p(a,b)]^{1-1} [alg_s(a,b)]^1 = alg_s(a,b) = a+b-ab$
+
+$kK^l_0(a,b) = 0 \cdot min(a,b) + (1-0)\frac{a+b}{2}          = \frac{a+b}{2}$
+
+$kK^l_1(a,b) = 1 \cdot min(a,b) + (1-1)\frac{a+b}{2}          = min(a,b)$
+
+$kK^r_0(a,b) = 0 \cdot max(a,b) + (1-0)\frac{a+b}{2}          = \frac{a+b}{2}$
+
+$kK^r_1(a,b) = 1 \cdot max(a,b) + (1-1)\frac{a+b}{2}          = max(a,b)$
+
+
+\begin{tikzpicture}
+	\begin{axis}[
+		axis x line=bottom,
+		axis y line=none,
+		width=14cm,
+		height=8cm,
+		xmin=0, xmax=5,
+		xlabel={Laufbereich},
+		xticklabels={,ab,,{min(a,b)},,{$\frac{a+b}{2}$},,{max(a,b)},,a+b-ab},
+		ymin=0, ymax = 1,
+	]
+
+	%kK^l_\gamma(a,b)
+	\addplot [mark=|,domain=1:2] coordinates {
+		(1,0.25)
+		(2,0.25)
+	};
+	
+	%kK^r_\gamma(a,b)
+	\addplot [mark=|,domain=2:3] coordinates {
+		(2,0.75)
+		(3,0.75)
+	};
+	
+	%A_\gamma(a,b)
+	\addplot [mark=|,domain=0:1] coordinates {
+		(0,0.5)
+		(4,0.5)
+	};
+	
+	%min-max-Kompensations-Operator
+	%TODO
+	
+	\end{axis}
+\end{tikzpicture}
+
+
