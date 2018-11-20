@@ -20,6 +20,10 @@ $kK^r_0(a,b) = 0 \cdot max(a,b) + (1-0)\frac{a+b}{2}          = \frac{a+b}{2}$
 
 $kK^r_1(a,b) = 1 \cdot max(a,b) + (1-1)\frac{a+b}{2}          = max(a,b)$
 
+$K_0(a,b)    = [min(a,b)^{1-0}] [max(a,b)]^0                  = min(a,b)$
+
+$K_1(a,b)    = [min(a,b)^{1-1}] [max(a,b)]^1                  = max(a,b)$
+
 
 \begin{tikzpicture}
 	\begin{axis}[
@@ -35,24 +39,31 @@ $kK^r_1(a,b) = 1 \cdot max(a,b) + (1-1)\frac{a+b}{2}          = max(a,b)$
 
 	%kK^l_\gamma(a,b)
 	\addplot [mark=|,domain=1:2] coordinates {
-		(1,0.25)
-		(2,0.25)
-	};
+		(1,0.2)
+		(2,0.2)
+	}
+	node[pos=0.5, above ] {$kK^l_\gamma$};
 	
 	%kK^r_\gamma(a,b)
 	\addplot [mark=|,domain=2:3] coordinates {
-		(2,0.75)
-		(3,0.75)
-	};
+		(2,0.8)
+		(3,0.8)
+	}
+	node[pos=0.5, above ] {$kK^r_\gamma$};
 	
 	%A_\gamma(a,b)
 	\addplot [mark=|,domain=0:1] coordinates {
-		(0,0.5)
-		(4,0.5)
-	};
+		(0,0.6)
+		(4,0.6)
+	}
+	node[pos=0.5, above ] {$A_\gamma$};
 	
-	%min-max-Kompensations-Operator
-	%TODO
+	%K_\gamma(a,b) min-max-Kompensations-Operator
+	\addplot [mark=|,domain=0:1] coordinates {
+		(1,0.4)
+		(3,0.4)
+	}
+	node[pos=0.5, above ] {$K_\gamma$};
 	
 	\end{axis}
 \end{tikzpicture}
