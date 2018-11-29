@@ -1,3 +1,61 @@
 \section*{\underline{Aufgabe 12}}
 
-\subsection*{a)}
+
+$
+\mu_A(x) := \begin{cases} 
+	\frac{x+1}{2} \textit{ falls }  -1 \leq x \leq q  \\
+	2-x           \textit{ falls }  1 \leq x \leq 2 \\
+	0			  \textit{ sonst}	\\
+\end{cases} 
+$
+
+$
+\mu_B(x) := \begin{cases} 
+	x-3 \textit{ falls }  3 \leq x \leq 4  \\
+	5-x           \textit{ falls }  4 \leq x \leq 5 \\
+	0			  \textit{ sonst}	\\
+\end{cases} 
+$
+
+\hfill
+
+%Lower Bound $A^{\geq\alpha}
+$\alpha \leq \frac{x+1}{2} \Rightarrow 2\alpha \leq x+1 \Rightarrow 2\alpha-1 \leq x$
+
+%Upper Bound $A^{\geq\alpha}
+$\alpha \leq 2-x \Rightarrow \alpha -2 \leq -x \Rightarrow 2-\alpha \geq x$
+
+$A^{\geq\alpha} = [2\alpha-1,2-\alpha]$
+
+\hfill
+
+%Lower Bound $B^{\geq\alpha}
+$\alpha \leq x-3 \Rightarrow a+3 \leq x$
+
+%Upper Bound $B^{\geq\alpha}
+$\alpha \leq 5-x \Rightarrow \alpha-5 \leq -x \Rightarrow 5-\alpha \geq x $
+
+$B^{\geq\alpha} = [\alpha+3 ,5-\alpha]$
+
+\hfill
+
+$A^{\geq\alpha}+B^{\geq\alpha} = [3\alpha+2,7-2\alpha]$
+
+\hfill
+
+$3\alpha+2 \leq x \Rightarrow 3\alpha \leq x-2 \Rightarrow \alpha \leq \frac{x-2}{3}$
+
+$x \leq 7-2\alpha \Rightarrow x-7 \leq -2 \alpha \Rightarrow 7-x \geq 2\alpha \Rightarrow \frac{7-x}{2} \geq \alpha$
+
+$\mu_{A\oplus B}(x) = max\{0,min\{\frac{x-2}{3},\frac{7-x}{2}\}\}$
+
+\hfill
+
+$\frac{7-x}{2} \leq \frac{x-2}{3} \Rightarrow 21 -3x \leq 2x-4 \Rightarrow 25 -5x \Rightarrow x \leq 5$
+
+$\mu_{A\oplus B}(x) = \begin{cases}
+\frac{x-2}{3} \textit{ falls } 2 \leq x \leq 5 \\
+\frac{7-x}{2} \textit{ falls } 5 \leq x \leq 7 \\
+0 \textit{ sonst}
+\end{cases}
+$
