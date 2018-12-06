@@ -1,1 +1,56 @@
 \section*{\underline{Aufgabe 13}}
+
+\subsection*{a)}
+
+  \begin{align*}
+    A \oplus B &= (4,1,2)_{LR} \oplus (5,3,1)_{LR} = (9,4,3)_{LR}\\\\
+    \mu_{A \oplus B}(x) &= \left\{
+    \begin{array}{ll}
+      L\left(\frac{9 - x}{4}\right) = \text{max}\left(0, 1 - \frac{9 - x}{4}\right) = \text{max}\left(0, \frac{x - 5}{4}\right)	& \textit{für } x < 9 \\[\bigskipamount]
+      R\left(\frac{x - 9}{3}\right) = \frac{1}{1 + \frac{x - 9}{3}} = \frac{3}{x - 6}	& \textit{für } x \geq 9 \\
+    \end{array}
+    \right.
+  \end{align*}
+  
+\subsection*{b)}
+
+  \begin{align*}
+    -A &= (-4,2,1)_{LR}\\\\
+    \mu_{-A}(x) &= \left\{
+    \begin{array}{ll}
+      R\left(\frac{-4 -x}{2}\right) = \frac{1}{1 + \frac{-4 -x}{2}} = \frac{2}{-2-x}	& \textit{für } x < -4 \\[\bigskipamount]
+      L\left(\frac{x + 4}{1}\right) = \text{max}\left(0, 1 - (x + 4)\right) = \text{max}\left(0,-x-3)\right)	& \textit{für } x \geq -4 \\
+    \end{array}
+    \right.
+  \end{align*}\\
+  
+\subsubsection*{Skizzen für a) und b)}
+
+\leavevmode\\
+
+\begin{tikzpicture}
+\begin{axis}[
+axis x line=bottom,
+axis y line=left,
+width=14cm,
+height=8cm,
+xtick={-7,-5,...,15},
+ytick={0,0.2,...,1.0},
+xmin=-7, xmax=15,
+xlabel={$x$},
+ymin=0, ymax = 1.05
+]	
+
+%A+B
+\addplot [mark=none, domain=-7:9,blue]{max(0,(x-5)/4)};
+\addplot [mark=none, domain=9:15,blue]{3/(x-6)}
+node[pos=0.3, above right] {$A\oplus B$};
+
+%-A
+\addplot [mark=none, domain=-7:-4,red]{2/(-2-x)};
+\addplot [mark=none, domain=-4:15,red]{max(0,-x-3)}
+node[pos=0.03, above right] {$-A$};
+
+\end{axis}
+\end{tikzpicture}
+
