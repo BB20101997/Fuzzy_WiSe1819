@@ -1,0 +1,49 @@
+[System]
+Name='task17d-sug'
+Type='sugeno'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=9
+AndMethod='min'
+OrMethod='max'
+ImpMethod='prod'
+AggMethod='max'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='SchneeMenge'
+Range=[0 1]
+NumMFs=3
+MF1='wenig':'trapmf',[-0.36 -0.0255 0.0929 0.247959183673469]
+MF2='mittel':'trimf',[0.172 0.46 0.652040816326531]
+MF3='viel':'trapmf',[0.580612244897959 0.766 1.04 1.36]
+
+[Input2]
+Name='ZeitBisWeihnachten'
+Range=[0 1]
+NumMFs=3
+MF1='wenig':'trapmf',[-0.36 -0.04 0.04 0.143877551020408]
+MF2='mittel':'trimf',[0.1 0.264285714285714 0.556]
+MF3='viel':'trapmf',[0.411224489795918 0.656 1.04 1.36]
+
+[Output1]
+Name='Weihnachtsstimmung'
+Range=[0 1]
+NumMFs=5
+MF1='kaum':'linear',[0 0 0.119581817421486]
+MF2='wenig':'linear',[0 0 0.354689754772678]
+MF3='normal':'linear',[0 0 0.564425972904409]
+MF4='sehr':'linear',[0 0 0.822444411828219]
+MF5='extrem':'linear',[0 0 0.936707156594797]
+
+[Rules]
+1 3, 1 (1) : 1
+2 3, 2 (1) : 1
+3 3, 1 (1) : 1
+1 2, 2 (1) : 1
+2 2, 3 (1) : 1
+3 2, 2 (1) : 1
+1 1, 3 (1) : 1
+2 1, 5 (1) : 1
+3 1, 2 (1) : 1

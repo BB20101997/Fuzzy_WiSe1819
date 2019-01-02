@@ -1,0 +1,49 @@
+[System]
+Name='task17a'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=9
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='SchneeMenge'
+Range=[0 1]
+NumMFs=3
+MF1='wenig':'trapmf',[-0.36 -0.0255 0.0929 0.247959183673469]
+MF2='mittel':'trimf',[0.172 0.46 0.652040816326531]
+MF3='viel':'trapmf',[0.580612244897959 0.766 1.04 1.36]
+
+[Input2]
+Name='ZeitBisWeihnachten'
+Range=[0 1]
+NumMFs=3
+MF1='wenig':'trapmf',[-0.36 -0.04 0.04 0.143877551020408]
+MF2='mittel':'trimf',[0.1 0.264285714285714 0.556]
+MF3='viel':'trapmf',[0.411224489795918 0.656 1.04 1.36]
+
+[Output1]
+Name='Weihnachtsstimmung'
+Range=[0 1]
+NumMFs=5
+MF1='kaum':'trapmf',[-0.288604081632653 -0.119404081632653 0.166795918367347 0.307795918367347]
+MF2='wenig':'trimf',[0.208834693877551 0.360134693877551 0.494934693877551]
+MF3='normal':'trimf',[0.365 0.564285714285714 0.764]
+MF4='sehr':'trimf',[0.713979591836735 0.819379591836735 0.933979591836735]
+MF5='extrem':'trapmf',[0.821428571428571 0.931 1.03 1.62]
+
+[Rules]
+1 3, 1 (1) : 1
+2 3, 2 (1) : 1
+3 3, 1 (1) : 1
+1 2, 2 (1) : 1
+2 2, 3 (1) : 1
+3 2, 2 (1) : 1
+1 1, 3 (1) : 1
+2 1, 5 (1) : 1
+3 1, 2 (1) : 1
