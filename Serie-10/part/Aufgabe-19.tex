@@ -1,3 +1,27 @@
 \section*{\underline{Aufgabe 19}}
 
 \subsection*{a)}
+
+Das ANFIS-Modell hat genau wie das Modell aus Aufgabe 18 vier Regeln.\\
+
+% train error: 0.39521
+% check error: 0.44638
+
+Der Fehler für die Trainingsdaten beträgt $0.39521$. Der Fehler für die Checking-Daten ist mit $0.44638$ etwas höher.
+
+%TODO vergleich mit errors aus A18 
+
+\subsection*{b)}
+
+Dieses Modell besitzt 32 Regeln, gegenüber den nur vier Regeln aus a) und Aufgabe 18.\\
+
+% train error: 0.03301
+% check error: 7.9124
+
+Die Genauigkeit ist auf den ersten Blick viel besser als in a). Der Trainingsfehler beträgt nur $0.03301$. Sieht man sich die Visualisierung an, kann man sich aber denken, dass die Übereinstimmungen wahrscheinlich etwas zu präzise sind und das Modell starkes Overfitting aufweist, sich also exakt auf die Trainingsdaten eingestellt hat:\\
+
+\includegraphics[width=\textwidth]{part/grid_train.png}\\
+
+Und tatsächlich beträgt der Fehler auf den Checking-Daten $7.9124$ gegenüber dem viel kleineren Fehler von $0.44638$ in a).
+
+%TODO vergleich mit errors aus A18 
