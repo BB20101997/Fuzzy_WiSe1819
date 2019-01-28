@@ -9,8 +9,9 @@
 \usepackage{microtype} %% Sorgt für besseren umgang mit zu lange/kurzen Zeilen
 \usepackage{pdfpages} %% Zum einfügen eines PDf dokuments
 \usepackage{pgfplots}
+\usepackage{verbatim}
 
-\title{Fuzzy Serie N}
+\title{Fuzzy Serie 11}
 \author{Bennet Bleßmann, Bennet Krause}
 
 \begin{document}
@@ -18,5 +19,10 @@
 
 \setlength{\parindent}{0pt}
 \include{part/Aufgabe-20}
-\include{task20.clp}	
+
+{
+\footnotesize
+\verbatiminput{task20.clp}
+}
+
 \end{document}

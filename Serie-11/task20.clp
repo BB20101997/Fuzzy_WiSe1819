@@ -1,34 +1,3 @@
-Jan 27, 2019 3:08:27 PM java.util.jar.Attributes read
-WARNING: Duplicate name in Manifest: Depends-On.
-Ensure that the manifest does not have duplicate entries, and
-that blank lines separate individual sections in both your
-manifest and in the META-INF/MANIFEST.MF entry in the jar file.
-Jan 27, 2019 3:08:27 PM java.util.jar.Attributes read
-WARNING: Duplicate name in Manifest: Depends-On.
-Ensure that the manifest does not have duplicate entries, and
-that blank lines separate individual sections in both your
-manifest and in the META-INF/MANIFEST.MF entry in the jar file.
-Jan 27, 2019 3:08:27 PM java.util.jar.Attributes read
-WARNING: Duplicate name in Manifest: Depends-On.
-Ensure that the manifest does not have duplicate entries, and
-that blank lines separate individual sections in both your
-manifest and in the META-INF/MANIFEST.MF entry in the jar file.
-Jan 27, 2019 3:08:27 PM java.util.jar.Attributes read
-WARNING: Duplicate name in Manifest: Depends-On.
-Ensure that the manifest does not have duplicate entries, and
-that blank lines separate individual sections in both your
-manifest and in the META-INF/MANIFEST.MF entry in the jar file.
-Jan 27, 2019 3:08:27 PM java.util.jar.Attributes read
-WARNING: Duplicate name in Manifest: Depends-On.
-Ensure that the manifest does not have duplicate entries, and
-that blank lines separate individual sections in both your
-manifest and in the META-INF/MANIFEST.MF entry in the jar file.
-Jan 27, 2019 3:08:27 PM java.util.jar.Attributes read
-WARNING: Duplicate name in Manifest: Depends-On.
-Ensure that the manifest does not have duplicate entries, and
-that blank lines separate individual sections in both your
-manifest and in the META-INF/MANIFEST.MF entry in the jar file.
-Benutze CLP-Datei: FuzzyShowerJess.clp
 ;; Diese Datei ist unvollstaendig
 ;;
 
